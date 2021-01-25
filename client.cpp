@@ -34,6 +34,7 @@ int main()
         std::exit(EXIT_FAILURE);
     }
 
+    std::cout << "input your message: " ;
     std::cin >> msg ; // msg入力
     send(sockfd, msg, sizeof(msg), 0); // msgを送信
     
@@ -41,6 +42,6 @@ int main()
     std::cout << buffer << std::endl; // 受信したデータを表示
 
     close(sockfd);
-    
+
     return 0;
 }
